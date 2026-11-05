@@ -10,8 +10,8 @@ const crypto = require('crypto');
 const { GAMES, HttpError, catalog, CROSS_LANES, CROSS_DIFFS, crossBp, crossMax, crossOutcomes, capWin, pay, cents } = require('./lib/games');
 const { Stream, newSeed, hashSeed } = require('./lib/rng');
 
-const PORT = Number(process.env.PORT) || 3000;
-const HOST = process.env.HOST || '127.0.0.1';
+const PORT = Number(process.env.PORT) || 8080;
+const HOST = process.env.HOST || '0.0.0.0';
 const DB_FILE = process.env.DB_FILE || path.join(__dirname, 'data', 'db.json');
 const PUBLIC = path.join(__dirname, 'public');
 const START_BALANCE = 10000;       // 100 € demo (σε cents)
