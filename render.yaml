@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: traffic-rush-casino
+    runtime: docker
+    plan: free          # δωρεάν· ΧΩΡΙΣ δίσκο: τα δεδομένα σβήνουν σε επανεκκίνηση/νέο deploy
+    envVars:
+      - key: HOST
+        value: 0.0.0.0
+      - key: DB_FILE
+        value: /data/db.json
+    # Για μόνιμη αποθήκευση: plan: starter και πρόσθεσε
+    # disk: { name: casino-data, mountPath: /data, sizeGB: 1 }
